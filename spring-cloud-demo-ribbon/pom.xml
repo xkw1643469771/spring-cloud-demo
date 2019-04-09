@@ -5,13 +5,20 @@
 	<artifactId>spring-cloud-demo-ribbon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.3.5.RELEASE</version>
 		<relativePath />
 	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<!-- Cloud版本， 和Boot相对应，Brixton-1.3-1.4，Edgware-1.5, Finchley-2  -->
+		<spring.cloud.version>Brixton.RELEASE</spring.cloud.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -42,7 +49,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Brixton.RELEASE</version>
+                <version>${spring.cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
